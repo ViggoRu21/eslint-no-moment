@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/no-moment.test.js"
+    "test": "node src/tests/no-moment.test.js"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
