@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-no-moment",
+  "name": "@ViggoRu21/eslint-no-moment",
   "version": "1.0.0",
   "main": "index.js",
   "publishConfig": {
