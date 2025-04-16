@@ -1,5 +1,5 @@
 const { RuleTester } = require('eslint');
-const rule = require('../src/lib/rules/no-moment');
+const rule = require('../lib/rules/no-moment');
 
 const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: 2015, sourceType: 'module' } });
 
