@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    'no-moment': require('./lib/rules/no-moment')
+    'no-moment': require('./src/lib/rules/no-moment')
   },
   configs: {
     recommended: {
