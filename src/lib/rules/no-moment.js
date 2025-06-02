@@ -4,9 +4,9 @@ module.exports = {
     docs: {
       description: 'disallow usage of moment',
       category: 'Best Practices',
-      recommended: false
+      recommended: true
     },
-    schema: [] // no options
+    schema: []
   },
   create(context) {
     return {
@@ -20,8 +20,10 @@ module.exports = {
       },
       CallExpression(node) {
         if (
+          node.callee.tyoe === 'Identifier' &&
           node.callee.name === 'require' &&
           node.arguments[0] &&
+          node.arguments[0].type === 'Literal' &&
           node.arguments[0].value === 'moment'
         ) {
           context.report({

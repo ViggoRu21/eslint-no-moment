@@ -15,38 +15,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org/' 
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
-        env:
+
+      - name: Build
+        run: npm run build
+
+      - name: Run Test
+        run: npm test
+
+      - name: Publish to npm
+        env: 
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
+        run: npm publish
+
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '20'
+      
       - name: Install dependencies
         run: npm install
+
       - name: Run tests
         run: npm test
-    

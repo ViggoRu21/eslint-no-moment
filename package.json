@@ -1,14 +1,28 @@
 {
   "name": "@viggoru21/eslint-plugin-no-moment",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "index.js",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "test": "node src/tests/no-moment.test.js"
+    "test": "node src/tests/no-moment.test.js",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "moment",
+    "typescript"
+  ],
+  "author": "Viggó Ýmir Hafliðason",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/utils": "^6.21.0",
+    "typescript": "^4.9.0"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^7 || ^8"
   }
 }
