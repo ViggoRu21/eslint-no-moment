@@ -11,13 +11,14 @@ export default createRule({
     type: 'problem',
     docs: {
       description: 'Block usage of moment',
-      recommended: true,
+      recommended: 'recommended',
     },
     messages: {
       forbidden: 'Using the moment library is forbidden.'
     },
-    schema: []
+    schema: [],
   },
+  defaultOptions: [],
   create(context) {
     return {
       ImportDeclaration(node: TSESTree.ImportDeclaration) {

@@ -1,6 +1,6 @@
 import noMoment from "./rules/no-moment"
 
-export const ruels = {
+export const rules = {
   'no-moment': noMoment,
 };
 
