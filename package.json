@@ -1,9 +1,9 @@
 {
   "name": "@viggoru21/eslint-plugin-no-moment",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "viggoru21:registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "test": "node src/tests/no-moment.test.js",
