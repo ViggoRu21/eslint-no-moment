@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-nomoment",
-  "version": "1.2.4",
+  "name": "eslint-plugin-no-moment",
+  "version": "1.2.5",
   "description": "Eslint rule to disallow usage of moment.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
